@@ -1,0 +1,3 @@
+--Tip Kullanımı
+let age: number = 25;
+**web servislerden gelen tipini bilmediğimiz değerler için  ""let age : any;""
