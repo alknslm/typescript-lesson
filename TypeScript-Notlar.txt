@@ -1,3 +1,20 @@
 --Tip Kullanımı
 let age: number = 25;
 **web servislerden gelen tipini bilmediğimiz değerler için  ""let age : any;""
+
+Union Types
+let age : number | string | = true ----> Bir değişken için birden fazla tür verilebilir.
+
+Literal Type
+let statusResult : 'pending' | 'approved' | 'rejected'; ---> bu değerlerden bir tanesi setlenebilir başkası kabul edilmez.
+
+Array
+let names : string[] = ["Ahmet", "Selim", "Mehmet"];
+let names : Array<string> = ["Ahmet", "Selim", "Mehmet"];   İki şekilde de array kullanılabilir.
+
+Karışık elemanlı dizi
+let mixedArray : (string | number)[] = ["Ali", 1, 2, "Mehmet"];
+
+-----------------------------------------------------------------------
+
+Interface - Type kendi tipimizi oluşturmamızı sağlıyor
