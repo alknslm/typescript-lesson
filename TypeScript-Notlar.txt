@@ -17,4 +17,12 @@ let mixedArray : (string | number)[] = ["Ali", 1, 2, "Mehmet"];
 
 -----------------------------------------------------------------------
 
-Interface - Type kendi tipimizi oluşturmamızı sağlıyor
+  //! PARTIAL - REQUIRED - READONLY- PICK - OMIT
+  //* PARTIAL   -> interface ile alınan datalardan ne kadardını yazarsan o kadarını kabul eder. Olmayanı hata olarak göstermez (olsada olur olmasada)  
+  // //? const kullanici1 : Partial<Kullanici>
+  //* REQUIRED  -> soru işaretli olsa da zorunlu alan gibi davranır (name? : string) required yazınca zorunlu hale gelir
+  //* READONLY  -> data class içinde yazanlar hariç dışarda nveri değiştirilmesine izin vermez kullanici1.name = "ali" yazılmaz.
+  //* PICK      -> sadece bir tane attribute varmış gibi davran.
+  //? const kullanici1 : Pick<Kullanici, "name">  sadece name varmış gibi kabul eder.
+  //* OMIT      -> buda yazılan attribute dışındaki değerleri al demek
+  //? const kullanici1 : Omit<Kullanici, "name"> name dışındaki diğer değerleri al
