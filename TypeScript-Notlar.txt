@@ -26,3 +26,12 @@ let mixedArray : (string | number)[] = ["Ali", 1, 2, "Mehmet"];
   //? const kullanici1 : Pick<Kullanici, "name">  sadece name varmış gibi kabul eder.
   //* OMIT      -> buda yazılan attribute dışındaki değerleri al demek
   //? const kullanici1 : Omit<Kullanici, "name"> name dışındaki diğer değerleri al
+
+
+  ------------------------------------------------------------------------
+  HOOKS
+
+  hooks oluştururken "use" ile başylaan isimlendirme kullanmak genel geçer kural.
+  uygulama içinde birçok yerde kullanılabilecek logic şeyler için tanımlanır.
+  
+
