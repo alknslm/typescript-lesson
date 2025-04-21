@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(59, 60, 61);
+    color: #fff;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+form {
+    width: 500px;
+}
+
+input {
+    width: 100%;
+    padding: 5px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(59, 60, 61);
+    border-bottom: 1px solid lightgray;
+    outline: none;
+}
+
+.inputDiv {
+    margin: 30px 0px;
+}
+
+.save-button {
+    width: 100%;
+    padding: 7px;
+    background-color: gold;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.input-error {
+    font-size: 15px;
+    color: rgb(163, 28, 28);
+}

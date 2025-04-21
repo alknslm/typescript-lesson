@@ -33,5 +33,40 @@ let mixedArray : (string | number)[] = ["Ali", 1, 2, "Mehmet"];
 
   hooks oluştururken "use" ile başylaan isimlendirme kullanmak genel geçer kural.
   uygulama içinde birçok yerde kullanılabilecek logic şeyler için tanımlanır.
+
+  ----------------------------------------------------------------------
+  FORMIK & YUP
+
+  Form uygulaması geliştirirken ki kontrolleri kolaylaştırır. Mail şifre vs.
+  FORMIK ile form ekranı oluştur. YUP ile kontrolleri sağla.
+      npm install formik --save
+      npm i yup
+  Formik ile inputlarla yapılan veri girişleri kontrol edilir. Yup ile yapılandırılımş requirmentlar ile kontrollerden sonra veriler uygun değilse hata mesajları formik'e gönderilir.
+
+    FORMİK
+    const { values, errors, handleChange, handleSubmit } = useFormik({ //*Formik içinden gelen değerler object distructing ile alıyoruz
+        initialValues: {
+            email: '',
+            age: '',
+            password: '',
+            confirmPassword: '',
+            term: ''
+        },
+        validationSchema: registerFormSchemas, //*Formik için kendi oluşturduğumuz registerFromSchemas yup'unu verdik.
+        onSubmit: submit
+    });
+
+    YUP
+    export const registerFormSchemas = yup.object().shape({
+    email: yup.string().email("Geçerli bir email adresi giriniz").required("Email adresi zorunlu"),
+
+    age: yup.number().positive("Poizitif bir değer giriniz").integer("Tam sayı giriniz").required("Yaş alanı zorunulu"),
+
+    password: yup.string().required("Şifre alanı zorunlu"),
+
+    confirmPassword: yup.string().required("Şifre tekrarı zorunlu").oneOf([yup.ref('password', yup.password)], "Şifreler eşleşmiyor"),
+
+    term: yup.boolean().required("Lütfen sözleşmeyi onaylayınız")
+})
   
 
