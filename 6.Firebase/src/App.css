@@ -77,3 +77,13 @@ input {
     margin-left: 5px;
     cursor: pointer;
 }
+
+.google-button {
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(47, 35, 207);
+    color: #fff;
+    margin-left: 5px;
+    cursor: pointer;
+}
