@@ -9,11 +9,17 @@ import MUIBox from './components/MUIBox'
 import MUIButton from './components/MUIButton'
 import MUICard from './components/MUICard'
 import MUICheckbox from './components/MUICheckbox'
+import MUIDialog from './components/MUIDialog'
 import MUIDrawer from './components/MUIDrawer'
 import MUIGrid from './components/MUIGrid'
 import MUIImageList from './components/MUIImageList'
+import MUIProgress from './components/MUIProgress'
 import MUISelect from './components/MUISelect'
+import MUISkeleton from './components/MUISkeleton'
+import MUISnackbar from './components/MUISnackbar'
 import MUIStack from './components/MUIStack'
+import MUITable from './components/MUITable'
+import MUITabs from './components/MUITabs'
 import MUITextField from './components/MUITextField'
 import MUITooltip from './components/MUITooltip'
 
@@ -37,7 +43,13 @@ function App() {
       {/* <MUIBadge /> */}
       {/* <MUIAvatar /> */}
       {/* <MUITooltip /> */}
-      <MUIAlert />
+      {/* <MUIAlert /> */}
+      {/* <MUIDialog /> */}
+      {/* <MUISnackbar /> */}
+      {/* <MUIProgress /> */}
+      {/* <MUISkeleton /> */}
+      {/* <MUITable /> */}
+      <MUITabs />
     </div>
   )
 }
